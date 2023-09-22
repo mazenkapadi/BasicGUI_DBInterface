@@ -55,14 +55,64 @@ public class DB_GUI_Controller implements Initializable {
 
     @FXML
     protected void addNewRecord() {
-
-
         data.add(new Person(
                 data.size()+1,
-                "Moaath",
-                "Alrajab",
-                "CPIS", "CS"
+                first_name.getText(),
+                last_name.getText(),
+                department.getText(),
+                major.getText()
         ));
+    }
+
+    @FXML
+    protected void clearForm(){
+        first_name.clear();
+        last_name.clear();
+        department.clear();
+        major.clear();
+    }
+
+    //TODO implement editRecord()
+    @FXML
+    protected void editRecord() {
+        Person p = tv.getSelectionModel().getSelectedItem();
+
+    }
+
+    @FXML
+    protected void deleteRecord() {
+        Person p = tv.getSelectionModel().getSelectedItem();
+        data.remove(p);
+    }
+
+
+    @FXML
+    protected void showImage() {
+        // Create a FileChooser instance for selecting an image file.
+        FileChooser fc = new FileChooser();
+
+        // Set the title of the file chooser dialog.
+        fc.setTitle("Choose an image");
+
+        // Add file extension filters to restrict selection to image files with specific extensions.
+        fc.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+        );
+
+        // Show the file chooser dialog and wait for the user to select a file.
+        File selectedFile = fc.showOpenDialog(null);
+
+        // Check if a file was selected.
+        if (selectedFile != null) {
+            try {
+                // Load the selected image file and display it in an ImageView component.
+                // Convert the file's URI to a URL and create a JavaFX Image from it.
+                img_view.setImage(new javafx.scene.image.Image(selectedFile.toURI().toURL().toString()));
+            } catch (IOException e) {
+                // Handle any IOException that might occur during image loading.
+                e.printStackTrace();
+            }
+        }
     }
 
 }

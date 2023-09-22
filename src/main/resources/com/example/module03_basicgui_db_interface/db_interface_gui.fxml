@@ -34,7 +34,7 @@
                     <MenuItem mnemonicParsing="false" text="Delete" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Coneection">
+                <Menu mnemonicParsing="false" text="Connection">
                   <items>
                     <MenuItem mnemonicParsing="false" text="About" />
                   </items>
