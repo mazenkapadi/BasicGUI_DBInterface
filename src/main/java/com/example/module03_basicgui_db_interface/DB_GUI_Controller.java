@@ -75,7 +75,6 @@ public class DB_GUI_Controller implements Initializable {
     //TODO implement editRecord()
     @FXML
     protected void editRecord() {
-        Person p = tv.getSelectionModel().getSelectedItem();
 
     }
 
