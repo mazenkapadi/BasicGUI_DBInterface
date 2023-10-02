@@ -8,6 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 
@@ -112,6 +113,11 @@ public class DB_GUI_Controller implements Initializable {
                 e.printStackTrace();
             }
         }
+        // set placeholder
+        else {
+            img_view.setImage(new Image("/src/main/resources/com/example/module03_basicgui_db_interface/profile.png"));
+        }
     }
 
+    // protected void showImage
 }
