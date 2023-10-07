@@ -96,8 +96,6 @@ public class DB_GUI_Controller implements Initializable {
         System.exit(0);
     }
 
-    // TODO: implement editRecord()
-
     /**
      * Edit a selected record in the TableView.
      */
