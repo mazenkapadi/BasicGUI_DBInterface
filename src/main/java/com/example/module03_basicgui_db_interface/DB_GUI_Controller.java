@@ -58,7 +58,6 @@ public class DB_GUI_Controller implements Initializable {
 
         // Set the data for the TableView
         tv.setItems(data);
-
     }
 
     /**
